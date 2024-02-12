@@ -13,7 +13,6 @@ body {
   background: linear-gradient(0deg, rgba(51,0,27,1) 0%, rgba(255,0,132,1) 100%);
   font-family: 'Protest Riot', sans-serif;
   text-align: center;
-  overflow: hidden;
 }
 img {
   display: block;
