@@ -1,0 +1,203 @@
+/*#region generalStyles*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+h1, h2, h3, p {
+  margin: 0;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  color: rgba(51,0,27,1);
+  background: linear-gradient(0deg, rgba(51,0,27,1) 0%, rgba(255,0,132,1) 100%);
+  font-family: 'Protest Riot', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+img {
+  display: block;
+  max-height: 100%;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5em;
+  height: 80vh;
+  width: 90%;
+  background-color: #ffe0f1;
+  border-radius: 7em;
+  overflow: hidden;
+}
+/*#endregion generalStyles*/
+
+/*#region contentBlock*/
+.content__block.hidden {
+  display: none;
+}
+.content__block--offer img {
+  position: relative;
+  left: 5em;
+  height: 40em;
+  margin: 0 auto;
+}
+.content__block--offer h1 {
+  font-size: 9em;
+  margin-top: -0.35em;
+}
+.content__block--yes h1 {
+  position: relative;
+  font-size: 6em;
+}
+/*#endregion contentBlock*/
+
+/*#region sliders*/
+.slider--yes .slick-list,
+.slider--no .slick-list {
+  height: 45em;
+  width: 150em;
+  margin: 0 auto 2em;
+}
+.slider--yes .slide,
+.slider--no .slide {
+  height: 45em;
+}
+.slider--yes .slide img,
+.slider--no .slide img {
+  margin: 0 auto;
+}
+.slick-arrow {
+  display: none;
+}
+.slider--yes img {
+  display: block;
+}
+
+.slider--no .slide img {
+  height: 90%;
+}
+.slider--no .slide p {
+  font-size: 3.5em;
+  margin-top: -0.2em;
+}
+/*#endregion sliders*/
+
+/*#region notification*/
+.notification {
+  position: absolute;
+  top: 4em;
+  right: 0;
+}
+.notification .noty_body {
+  display: flex;
+  align-items: center;
+  padding: 0.2em 2em 0.2em 0.2em !important;
+  font-size: 3em !important;
+}
+.noty_theme__sunset.noty_type__error {
+  border-top-left-radius: 3em !important;
+  border-bottom-left-radius: 3em !important;
+  background-color: #e10075 !important;
+}
+.notification img {
+  height: 5em;
+}
+.notification p {
+  width: 14em;
+  text-align: left;
+}
+/*#endregion notification*/
+
+/*#region buttons*/
+.content__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 45em;
+}
+.content__buttons.hidden {
+  display: none;
+}
+.content__button {
+  position: relative;
+  display: block;
+  background-color: #ffe0f1;
+  color: rgba(51,0,27,1);
+  font-family: inherit;
+  font-size: 3.7em;
+  padding: 0.5em 1.3em;
+  border: solid 0.2em rgba(51,0,27,1);
+  border-radius: 0.7em;
+  z-index: 2;
+  box-shadow: 0.5em 0.5em 0 0 rgba(51,0,27,1);
+  cursor: pointer;
+  transition: all 0.3s linear;
+  outline: none;
+}
+.content__button:hover,
+.content__button:active {
+  box-shadow: 0 0 0 0 rgba(51,0,27,1);
+}
+/*#endregion buttons*/
+
+/*#region clue*/
+.content__button--yes .clue {
+  position: absolute;
+  width: max-content;
+  font-size: 0.7em;
+  transform: scaleX(1);
+  transition: all 0.4s linear;
+}
+.content__button--yes .clue--1 {
+  top: -2em;
+  left: 1.7em;
+  transform-origin: center left;
+}
+.content__button--yes .clue--2 {
+  bottom: -2.7em;
+  left: -0.3em;
+  transform-origin: center right;
+}
+.content__button--yes .clue.hidden {
+  transform: scaleX(0);
+}
+/*#endregion clue*/
+
+/*#region rotateBlock*/
+.rotate__block {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe0f1;
+  z-index: 5;
+}
+.rotate__block.visible {
+  display: flex;
+}
+.rotate__block img {
+  position: relative;
+  left: -1.5em;
+  top: -3em;
+  width: 85%;
+}
+.rotate__block p {
+  position: relative;
+  top: -1.5em;
+  font-size: 1.8em;
+}
+/*#endregion rotateBlock*/
